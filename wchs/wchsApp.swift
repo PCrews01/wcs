@@ -7,9 +7,12 @@
 
 import SwiftUI
 import SwiftData
+import GoogleSignIn
 
 @main
-struct wchsApp: App {
+ struct wchsApp: App {
+    @State var vc : UIViewController = UIViewController()
+    @State var user_model = UserModel()
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -26,6 +29,20 @@ struct wchsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(user_model)
+                .onAppear{
+                    GIDSignIn.sharedInstance.restorePreviousSignIn{
+                        user, error in
+                        if let user = user {
+                            user_model.createUser(user: user)
+                        }
+                    }
+                }
+                .onOpenURL(perform: { url in
+                    
+                    GIDSignIn.sharedInstance.handle(url)
+                })
+                .tint(Color("PrimaryColor"))
         }
         .modelContainer(sharedModelContainer)
     }

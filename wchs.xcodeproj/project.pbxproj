@@ -7,14 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B15508C2AF81E6400477A75 /* HelpdeskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B15508B2AF81E6400477A75 /* HelpdeskView.swift */; };
+		7B2A30A42B296092009BA043 /* wolverine_news.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A30A32B296092009BA043 /* wolverine_news.swift */; };
 		7B3934B72AF468E6003A0AE0 /* wchsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934B62AF468E6003A0AE0 /* wchsApp.swift */; };
 		7B3934B92AF468E6003A0AE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934B82AF468E6003A0AE0 /* ContentView.swift */; };
 		7B3934BB2AF468E6003A0AE0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934BA2AF468E6003A0AE0 /* Item.swift */; };
 		7B3934BD2AF468E7003A0AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3934BC2AF468E7003A0AE0 /* Assets.xcassets */; };
 		7B3934C12AF468E7003A0AE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3934C02AF468E7003A0AE0 /* Preview Assets.xcassets */; };
+		7B3934C82AF4695E003A0AE0 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934C72AF4695E003A0AE0 /* ToDo.swift */; };
+		7B3934CB2AF553C1003A0AE0 /* .env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934CA2AF553C1003A0AE0 /* .env.swift */; };
+		7B3934CE2AF5562F003A0AE0 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7B3934CD2AF5562F003A0AE0 /* GoogleSignIn */; };
+		7B3934D02AF5562F003A0AE0 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7B3934CF2AF5562F003A0AE0 /* GoogleSignInSwift */; };
+		7B3934D22AF55AF8003A0AE0 /* client_113087941687-qinmdllr49j76na3iucekk90gai9g85b.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B3934D12AF55AF8003A0AE0 /* client_113087941687-qinmdllr49j76na3iucekk90gai9g85b.apps.googleusercontent.com.plist */; };
+		7B3934D72AF64B5B003A0AE0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934D62AF64B5B003A0AE0 /* Models.swift */; };
+		7B3934D92AF64D88003A0AE0 /* observed_objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934D82AF64D88003A0AE0 /* observed_objects.swift */; };
+		7B3934DB2AF65AB9003A0AE0 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934DA2AF65AB9003A0AE0 /* data.swift */; };
+		7B3934DE2AF65EB0003A0AE0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934DD2AF65EB0003A0AE0 /* HomeView.swift */; };
+		7B3934E02AF6603E003A0AE0 /* FormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934DF2AF6603E003A0AE0 /* FormsView.swift */; };
+		7B3934E22AF6623A003A0AE0 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934E12AF6623A003A0AE0 /* ContactsView.swift */; };
+		7B3934E42AF6DD9F003A0AE0 /* DriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934E32AF6DD9F003A0AE0 /* DriveView.swift */; };
+		7B3934E72AF7BB63003A0AE0 /* GoogleUserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934E62AF7BB63003A0AE0 /* GoogleUserCard.swift */; };
+		7B3934EA2AF7C29F003A0AE0 /* SectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934E92AF7C29F003A0AE0 /* SectionTitle.swift */; };
+		7B3934EC2AF7DAC9003A0AE0 /* PageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934EB2AF7DAC9003A0AE0 /* PageHeader.swift */; };
+		7B3934EE2AF7F093003A0AE0 /* NewsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3934ED2AF7F093003A0AE0 /* NewsCard.swift */; };
+		7B3A21422B21EFDA00667932 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3A21412B21EFDA00667932 /* FormView.swift */; };
+		7B7628AD2B092AB20026CD1D /* NewDeviceForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7628AC2B092AB20026CD1D /* NewDeviceForm.swift */; };
+		7B7628AF2B092AE00026CD1D /* AdminFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7628AE2B092AE00026CD1D /* AdminFormView.swift */; };
+		7B89955F2AFFE0E300B48F64 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B89955E2AFFE0E300B48F64 /* AdminView.swift */; };
+		7B8995612AFFE1CB00B48F64 /* AdminCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8995602AFFE1CB00B48F64 /* AdminCard.swift */; };
+		7B8995642B00552B00B48F64 /* AdminForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8995632B00552B00B48F64 /* AdminForms.swift */; };
+		7B8995662B01001C00B48F64 /* WeatherPit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8995652B01001C00B48F64 /* WeatherPit.swift */; };
+		7B8995682B0182EF00B48F64 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8995672B0182EF00B48F64 /* dummy.swift */; };
+		7BB9502E2B0E3953009BAD0E /* DeviceInventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9502D2B0E3953009BAD0E /* DeviceInventoryView.swift */; };
+		7BC350702B155F56002A7E94 /* InventoryDeviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC3506F2B155F56002A7E94 /* InventoryDeviceList.swift */; };
+		7BC81C1A2B1227A000E91519 /* AdminChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC81C192B1227A000E91519 /* AdminChart.swift */; };
+		7BC8750F2AF9136F003B7129 /* DocsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8750E2AF9136F003B7129 /* DocsView.swift */; };
+		7BC875112AF914BB003B7129 /* SheetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC875102AF914BB003B7129 /* SheetsView.swift */; };
+		7BD0637F2B263D3F0021AD58 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD0637E2B263D3F0021AD58 /* OpenAIKit */; };
+		7BD063822B266B730021AD58 /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD063812B266B730021AD58 /* ChatGPTSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B15508B2AF81E6400477A75 /* HelpdeskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpdeskView.swift; sourceTree = "<group>"; };
+		7B2A30A32B296092009BA043 /* wolverine_news.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wolverine_news.swift; sourceTree = "<group>"; };
 		7B3934B32AF468E6003A0AE0 /* wchs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wchs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3934B62AF468E6003A0AE0 /* wchsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wchsApp.swift; sourceTree = "<group>"; };
 		7B3934B82AF468E6003A0AE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -22,6 +57,34 @@
 		7B3934BC2AF468E7003A0AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B3934BE2AF468E7003A0AE0 /* wchs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wchs.entitlements; sourceTree = "<group>"; };
 		7B3934C02AF468E7003A0AE0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7B3934C72AF4695E003A0AE0 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		7B3934CA2AF553C1003A0AE0 /* .env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .env.swift; sourceTree = "<group>"; };
+		7B3934D12AF55AF8003A0AE0 /* client_113087941687-qinmdllr49j76na3iucekk90gai9g85b.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_113087941687-qinmdllr49j76na3iucekk90gai9g85b.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
+		7B3934D52AF55D3F003A0AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7B3934D62AF64B5B003A0AE0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		7B3934D82AF64D88003A0AE0 /* observed_objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = observed_objects.swift; sourceTree = "<group>"; };
+		7B3934DA2AF65AB9003A0AE0 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		7B3934DD2AF65EB0003A0AE0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7B3934DF2AF6603E003A0AE0 /* FormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsView.swift; sourceTree = "<group>"; };
+		7B3934E12AF6623A003A0AE0 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		7B3934E32AF6DD9F003A0AE0 /* DriveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveView.swift; sourceTree = "<group>"; };
+		7B3934E62AF7BB63003A0AE0 /* GoogleUserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleUserCard.swift; sourceTree = "<group>"; };
+		7B3934E92AF7C29F003A0AE0 /* SectionTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitle.swift; sourceTree = "<group>"; };
+		7B3934EB2AF7DAC9003A0AE0 /* PageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHeader.swift; sourceTree = "<group>"; };
+		7B3934ED2AF7F093003A0AE0 /* NewsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCard.swift; sourceTree = "<group>"; };
+		7B3A21412B21EFDA00667932 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		7B7628AC2B092AB20026CD1D /* NewDeviceForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDeviceForm.swift; sourceTree = "<group>"; };
+		7B7628AE2B092AE00026CD1D /* AdminFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminFormView.swift; sourceTree = "<group>"; };
+		7B89955E2AFFE0E300B48F64 /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
+		7B8995602AFFE1CB00B48F64 /* AdminCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCard.swift; sourceTree = "<group>"; };
+		7B8995632B00552B00B48F64 /* AdminForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminForms.swift; sourceTree = "<group>"; };
+		7B8995652B01001C00B48F64 /* WeatherPit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPit.swift; sourceTree = "<group>"; };
+		7B8995672B0182EF00B48F64 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
+		7BB9502D2B0E3953009BAD0E /* DeviceInventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInventoryView.swift; sourceTree = "<group>"; };
+		7BC3506F2B155F56002A7E94 /* InventoryDeviceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryDeviceList.swift; sourceTree = "<group>"; };
+		7BC81C192B1227A000E91519 /* AdminChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChart.swift; sourceTree = "<group>"; };
+		7BC8750E2AF9136F003B7129 /* DocsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocsView.swift; sourceTree = "<group>"; };
+		7BC875102AF914BB003B7129 /* SheetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +92,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD063822B266B730021AD58 /* ChatGPTSwift in Frameworks */,
+				7B3934CE2AF5562F003A0AE0 /* GoogleSignIn in Frameworks */,
+				7B3934D02AF5562F003A0AE0 /* GoogleSignInSwift in Frameworks */,
+				7BD0637F2B263D3F0021AD58 /* OpenAIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +105,9 @@
 		7B3934AA2AF468E6003A0AE0 = {
 			isa = PBXGroup;
 			children = (
+				7B3934D12AF55AF8003A0AE0 /* client_113087941687-qinmdllr49j76na3iucekk90gai9g85b.apps.googleusercontent.com.plist */,
+				7B3934C92AF553A5003A0AE0 /* backend */,
+				7B3934C72AF4695E003A0AE0 /* ToDo.swift */,
 				7B3934B52AF468E6003A0AE0 /* wchs */,
 				7B3934B42AF468E6003A0AE0 /* Products */,
 			);
@@ -54,6 +124,9 @@
 		7B3934B52AF468E6003A0AE0 /* wchs */ = {
 			isa = PBXGroup;
 			children = (
+				7B3934E52AF7BB4D003A0AE0 /* components */,
+				7B3934DC2AF65E9F003A0AE0 /* views */,
+				7B3934D52AF55D3F003A0AE0 /* Info.plist */,
 				7B3934B62AF468E6003A0AE0 /* wchsApp.swift */,
 				7B3934B82AF468E6003A0AE0 /* ContentView.swift */,
 				7B3934BA2AF468E6003A0AE0 /* Item.swift */,
@@ -72,6 +145,86 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7B3934C92AF553A5003A0AE0 /* backend */ = {
+			isa = PBXGroup;
+			children = (
+				7B3934CA2AF553C1003A0AE0 /* .env.swift */,
+				7B3934D62AF64B5B003A0AE0 /* Models.swift */,
+				7B3934D82AF64D88003A0AE0 /* observed_objects.swift */,
+				7B3934DA2AF65AB9003A0AE0 /* data.swift */,
+				7B8995672B0182EF00B48F64 /* dummy.swift */,
+				7B2A30A32B296092009BA043 /* wolverine_news.swift */,
+			);
+			path = backend;
+			sourceTree = "<group>";
+		};
+		7B3934DC2AF65E9F003A0AE0 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				7B3A21402B21EFA200667932 /* inprogress */,
+				7B7628AB2B0928330026CD1D /* admin_views */,
+				7B3934DD2AF65EB0003A0AE0 /* HomeView.swift */,
+				7B3934DF2AF6603E003A0AE0 /* FormsView.swift */,
+				7B3934E12AF6623A003A0AE0 /* ContactsView.swift */,
+				7B3934E32AF6DD9F003A0AE0 /* DriveView.swift */,
+				7B15508B2AF81E6400477A75 /* HelpdeskView.swift */,
+				7BC8750E2AF9136F003B7129 /* DocsView.swift */,
+				7BC875102AF914BB003B7129 /* SheetsView.swift */,
+				7B89955E2AFFE0E300B48F64 /* AdminView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		7B3934E52AF7BB4D003A0AE0 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				7BC81C182B12278000E91519 /* charts */,
+				7B8995622B0051E600B48F64 /* sheets */,
+				7B3934E62AF7BB63003A0AE0 /* GoogleUserCard.swift */,
+				7B3934E92AF7C29F003A0AE0 /* SectionTitle.swift */,
+				7B3934EB2AF7DAC9003A0AE0 /* PageHeader.swift */,
+				7B3934ED2AF7F093003A0AE0 /* NewsCard.swift */,
+				7B8995602AFFE1CB00B48F64 /* AdminCard.swift */,
+				7B8995652B01001C00B48F64 /* WeatherPit.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		7B3A21402B21EFA200667932 /* inprogress */ = {
+			isa = PBXGroup;
+			children = (
+				7B3A21412B21EFDA00667932 /* FormView.swift */,
+			);
+			path = inprogress;
+			sourceTree = "<group>";
+		};
+		7B7628AB2B0928330026CD1D /* admin_views */ = {
+			isa = PBXGroup;
+			children = (
+				7B7628AC2B092AB20026CD1D /* NewDeviceForm.swift */,
+				7B7628AE2B092AE00026CD1D /* AdminFormView.swift */,
+				7BB9502D2B0E3953009BAD0E /* DeviceInventoryView.swift */,
+				7BC3506F2B155F56002A7E94 /* InventoryDeviceList.swift */,
+			);
+			path = admin_views;
+			sourceTree = "<group>";
+		};
+		7B8995622B0051E600B48F64 /* sheets */ = {
+			isa = PBXGroup;
+			children = (
+				7B8995632B00552B00B48F64 /* AdminForms.swift */,
+			);
+			path = sheets;
+			sourceTree = "<group>";
+		};
+		7BC81C182B12278000E91519 /* charts */ = {
+			isa = PBXGroup;
+			children = (
+				7BC81C192B1227A000E91519 /* AdminChart.swift */,
+			);
+			path = charts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,6 +241,12 @@
 			dependencies = (
 			);
 			name = wchs;
+			packageProductDependencies = (
+				7B3934CD2AF5562F003A0AE0 /* GoogleSignIn */,
+				7B3934CF2AF5562F003A0AE0 /* GoogleSignInSwift */,
+				7BD0637E2B263D3F0021AD58 /* OpenAIKit */,
+				7BD063812B266B730021AD58 /* ChatGPTSwift */,
+			);
 			productName = wchs;
 			productReference = 7B3934B32AF468E6003A0AE0 /* wchs.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +275,11 @@
 				Base,
 			);
 			mainGroup = 7B3934AA2AF468E6003A0AE0;
+			packageReferences = (
+				7B3934CC2AF5562F003A0AE0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				7BD0637D2B263D3F0021AD58 /* XCRemoteSwiftPackageReference "OpenAI" */,
+				7BD063802B266B730021AD58 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
+			);
 			productRefGroup = 7B3934B42AF468E6003A0AE0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3934D22AF55AF8003A0AE0 /* client_113087941687-qinmdllr49j76na3iucekk90gai9g85b.apps.googleusercontent.com.plist in Resources */,
 				7B3934C12AF468E7003A0AE0 /* Preview Assets.xcassets in Resources */,
 				7B3934BD2AF468E7003A0AE0 /* Assets.xcassets in Resources */,
 			);
@@ -142,9 +307,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3934EE2AF7F093003A0AE0 /* NewsCard.swift in Sources */,
+				7B3934EA2AF7C29F003A0AE0 /* SectionTitle.swift in Sources */,
+				7B3934E02AF6603E003A0AE0 /* FormsView.swift in Sources */,
+				7B15508C2AF81E6400477A75 /* HelpdeskView.swift in Sources */,
+				7B3934DE2AF65EB0003A0AE0 /* HomeView.swift in Sources */,
+				7B3934E72AF7BB63003A0AE0 /* GoogleUserCard.swift in Sources */,
 				7B3934B92AF468E6003A0AE0 /* ContentView.swift in Sources */,
+				7BC8750F2AF9136F003B7129 /* DocsView.swift in Sources */,
+				7B2A30A42B296092009BA043 /* wolverine_news.swift in Sources */,
+				7B3934E42AF6DD9F003A0AE0 /* DriveView.swift in Sources */,
+				7B8995612AFFE1CB00B48F64 /* AdminCard.swift in Sources */,
+				7B8995682B0182EF00B48F64 /* dummy.swift in Sources */,
+				7B3934EC2AF7DAC9003A0AE0 /* PageHeader.swift in Sources */,
+				7B3A21422B21EFDA00667932 /* FormView.swift in Sources */,
 				7B3934BB2AF468E6003A0AE0 /* Item.swift in Sources */,
+				7B3934CB2AF553C1003A0AE0 /* .env.swift in Sources */,
+				7B7628AF2B092AE00026CD1D /* AdminFormView.swift in Sources */,
+				7B3934D72AF64B5B003A0AE0 /* Models.swift in Sources */,
+				7B3934D92AF64D88003A0AE0 /* observed_objects.swift in Sources */,
+				7B89955F2AFFE0E300B48F64 /* AdminView.swift in Sources */,
+				7B7628AD2B092AB20026CD1D /* NewDeviceForm.swift in Sources */,
 				7B3934B72AF468E6003A0AE0 /* wchsApp.swift in Sources */,
+				7B8995642B00552B00B48F64 /* AdminForms.swift in Sources */,
+				7B8995662B01001C00B48F64 /* WeatherPit.swift in Sources */,
+				7BC81C1A2B1227A000E91519 /* AdminChart.swift in Sources */,
+				7B3934C82AF4695E003A0AE0 /* ToDo.swift in Sources */,
+				7BB9502E2B0E3953009BAD0E /* DeviceInventoryView.swift in Sources */,
+				7B3934E22AF6623A003A0AE0 /* ContactsView.swift in Sources */,
+				7B3934DB2AF65AB9003A0AE0 /* data.swift in Sources */,
+				7BC350702B155F56002A7E94 /* InventoryDeviceList.swift in Sources */,
+				7BC875112AF914BB003B7129 /* SheetsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +463,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = wchs/wchs.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"wchs/Preview Content\"";
@@ -278,12 +473,16 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = wchs/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = logo_wide_green;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -293,8 +492,9 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.paulinthious.wchs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuhhcue.wchs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -308,6 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = wchs/wchs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -316,12 +517,16 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = wchs/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = logo_wide_green;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -363,6 +568,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B3934CC2AF5562F003A0AE0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		7BD0637D2B263D3F0021AD58 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FuturraGroup/OpenAI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+		7BD063802B266B730021AD58 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/ChatGPTSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B3934CD2AF5562F003A0AE0 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B3934CC2AF5562F003A0AE0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		7B3934CF2AF5562F003A0AE0 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B3934CC2AF5562F003A0AE0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		7BD0637E2B263D3F0021AD58 /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BD0637D2B263D3F0021AD58 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAIKit;
+		};
+		7BD063812B266B730021AD58 /* ChatGPTSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BD063802B266B730021AD58 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
+			productName = ChatGPTSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B3934AB2AF468E6003A0AE0 /* Project object */;
 }
