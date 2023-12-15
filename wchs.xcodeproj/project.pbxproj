@@ -106,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				7B3934D12AF55AF8003A0AE0 /* client_113087941687-qinmdllr49j76na3iucekk90gai9g85b.apps.googleusercontent.com.plist */,
-				7B3934C92AF553A5003A0AE0 /* backend */,
 				7B3934C72AF4695E003A0AE0 /* ToDo.swift */,
 				7B3934B52AF468E6003A0AE0 /* wchs */,
 				7B3934B42AF468E6003A0AE0 /* Products */,
@@ -124,6 +123,7 @@
 		7B3934B52AF468E6003A0AE0 /* wchs */ = {
 			isa = PBXGroup;
 			children = (
+				7B3934C92AF553A5003A0AE0 /* backend */,
 				7B3934E52AF7BB4D003A0AE0 /* components */,
 				7B3934DC2AF65E9F003A0AE0 /* views */,
 				7B3934D52AF55D3F003A0AE0 /* Info.plist */,
