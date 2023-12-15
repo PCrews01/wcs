@@ -12,67 +12,77 @@ struct FormsView: View {
     @State var show_list                :   Bool    =   false
     @State var forms : [GWForm] = []
     var body: some View {
-        PageHeader(title: "Forms")
-        HStack{
-            Spacer()
-            Toggle(show_list ? "Grid View" : "List View" ,isOn: $show_list)
-                .animation(.bouncy, value: show_list)
-        }
-        if forms.count < 1 {
-            Text("Helpdesk")
-                .onAppear {
-                    getForms()
+        GeometryReader{ geo in
+            VStack{
+                PageHeader(title: "Forms")
+                HStack{
+                    Spacer()
+                    Toggle("" ,isOn: $show_list)
+                        .animation(.bouncy, value: show_list)
+                        .frame(width: 150)
+                    Image(systemName: show_list ? "circle.grid.3x3" : "text.justify")
+                        
                 }
-        } else {
-            ScrollView{
-                if !show_list {
-                    LazyVGrid(columns: getGridColumns(column: 3)) {
-                        ForEach(forms, id:\.id){
-                            form in
-                            NavigationLink {
-                                FormView(sheet_id: form.sheet_id)
-                            } label: {
-                                VStack{
-                                    Image(systemName: "doc.text.image")
-                                        .resizable()
-                                        .frame(width: 75, height: 75)
-                                    Text(form.name)
-                                        .font(.title)
-                                        .fontWeight(.semibold)
-                                }
-                                .padding()
-                                .background(Color("PrimaryColor"))
-                                .foregroundStyle(.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                                .frame(height: 300, alignment: .center)
-                                .padding(.bottom, 15)
-                            }
+                .padding()
+                if forms.count < 1 {
+                    Text("Helpdesk")
+                        .onAppear {
+                            getForms()
                         }
-                    }
                 } else {
-                    VStack{
-                        ForEach(forms, id:\.id){ form in
-                            NavigationLink {
-                                FormView(sheet_id: form.sheet_id)
-                            } label: {
-                                HStack{
-                                    Text(form.name)
-                                        .font(.title)
-                                        .fontWeight(.semibold)
-                                    Spacer()
+                    if !show_list {
+                        ScrollView{
+                            LazyVGrid(columns: getGridColumns(column: 3)) {
+                                ForEach(forms, id:\.id){
+                                    form in
+                                    ZStack{
+                                        NavigationLink {
+                                            FormView(form_title: form.name, sheet_id: form.sheet_id)
+                                        } label: {
+                                            VStack{
+                                                Image(systemName: "doc.text.image")
+                                                    .resizable()
+                                                    .frame(width: 50, height: 75)
+                                                Text(form.name)
+                                                    .multilineTextAlignment(.leading)
+                                                    .lineLimit(3)
+                                            }
+                                            .padding()
+                                            .foregroundStyle(.white)
+                                            .frame(width: (geo.size.width / 3) ,height: (geo.size.height / 5))
+                                        }
+                                    }
+                                    .background(Color("PrimaryColor"))
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(alignment:.center)
+//                                    .padding()
                                 }
-                                .padding()
-                                .foregroundStyle(.white)
-                                .background(Color.purple)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
                             }
                         }
+                    } else {
+                        VStack{
+                            Table(of: GWForm.self) {
+                                TableColumn("Name", value: \.name)
+                                TableColumn("Link", value: \.sheet_id)
+                            } rows: {
+                                ForEach(forms, id:\.id){ form in
+                                    TableRow(form)
+                                        .contextMenu {
+                                            NavigationLink {
+                                                FormView(form_title: form.name, sheet_id: form.sheet_id)
+                                            } label: {
+                                                Text("View Form")
+                                            }
+                                        }
+                                }
+                            }
+                        }.foregroundStyle(.black)
                     }
                 }
             }
         }
     }
-    
     private func getForms(){
         
         let url = "https://www.googleapis.com/drive/v3/files?corpus=user&q=mimeType%3D%22application%2Fvnd.google-apps.form%22"
@@ -99,14 +109,14 @@ struct FormsView: View {
                     let returned_files = json_object.filter({$0.key == "files"})
                     
                     for file in returned_files{
-                            if let c = file.value as? [[String:String]]{
-                                for x in c {
-                                    let new_file : GWForm = GWForm(id: x["id"] ?? "No ID", kind: x["kind"] ?? "No Kind", mime_type: x["mimeType"] ?? "No Mime", name: x["name"] ?? "No Name", sheet_id: x["id"] ?? "x")
-                                    
-                                    withAnimation(.bouncy){
-                                        forms.append(new_file)
-                                    }
+                        if let c = file.value as? [[String:String]]{
+                            for x in c {
+                                let new_file : GWForm = GWForm(id: x["id"] ?? "No ID", kind: x["kind"] ?? "No Kind", mime_type: x["mimeType"] ?? "No Mime", name: x["name"] ?? "No Name", sheet_id: x["id"] ?? "x")
+                                
+                                withAnimation(.bouncy){
+                                    forms.append(new_file)
                                 }
+                            }
                             
                         }
                     }

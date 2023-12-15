@@ -52,7 +52,7 @@ struct InventoryDeviceList: View {
         Text("")
     }
     func getDeviceList(){
-        print("Device to list \(device_to_list.split(separator: " ").first)")
+//        print("Device to list \(device_to_list.split(separator: " ").first)")
         let sheet_id = data_set_id
         let sheet_range = "\(device_to_list.split(separator: " ").first ?? "Chromebooks")s!A1:H"
         let sheet_update_url = "https://sheets.googleapis.com/v4/spreadsheets/\(sheet_id)/values/\(sheet_range)"

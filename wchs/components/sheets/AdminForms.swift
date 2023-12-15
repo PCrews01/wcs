@@ -207,9 +207,9 @@ struct AdminForms: View {
                     status_message = "Error creating \(new_data[1])'s account. \(errors.localizedDescription)."
                 }
             }
-            if let response = response {
-                print("resp: \(response)")
-            }
+//            if let response = response {
+//                print("resp: \(response)")
+//            }
         }.resume()
     }
     
@@ -369,7 +369,7 @@ struct AdminForms: View {
                 phones: GoogleDomainUserPhones(value: "+1 718 782 9830", type: "school"),
                 org_unit_path: new_org,
                 include_in_global_address_list: true)
-            print("New user \(new_user)")
+//            print("New user \(new_user)")
             addNewDomainUser(user: new_user)
         }
         guard let s_id = URL(string: sheet_update_url) else {
@@ -410,10 +410,10 @@ struct AdminForms: View {
                 new_data = []
                 
                 for form_field in form_fields.enumerated() {
-                    print("Form \(form_field)")
+//                    print("Form \(form_field)")
 //                    form_fields[form_field]
                 }
-                print("New data emmpty")
+//                print("New data empty")
 //                form_complete = true
             }
         }

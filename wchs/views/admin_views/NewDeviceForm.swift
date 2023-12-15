@@ -40,16 +40,16 @@ struct NewDeviceForm: View {
             do {
                 if let json_object = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]{
                     if let body = json_object["values"] as? [[String]]{
-                        print("Values \(body)")
+//                        print("Values \(body)")
                             for ext in body {
-                                print("ext \(body)")
+//                                print("ext \(body)")
                                 
                                 withAnimation(.bouncy){
 //                                    extensions.append(user_extension)
                                 }
                             }
                     } else {
-                        print("Spreadheet Doc is \(json_object["values"] ?? "")")
+//                        print("Spreadheet Doc is \(json_object["values"] ?? "")")
                     }
                 }
             } catch {

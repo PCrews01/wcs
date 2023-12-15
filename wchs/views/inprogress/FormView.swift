@@ -16,15 +16,17 @@ struct FormView: View {
     @EnvironmentObject var user_model   :   UserModel
     @State var status_message           :   String              =   ""
     @State var form_headers             :   [String]            =   []
-    @State var form_title               :   String              =   ""
+    @State var form_title               :   String              
     @State var form_entry_paragraph     :   String              =   ""
-    @State var form_entry_toggle        :   Bool                =   false
+    @State var form_entry_toggle        :   Bool                =   true
     @State var form_responses           :   [String:String]     =   [:]
     @State var checked_questions        :   [String]            =   []
     @State var is_included_in_response  :   [String]            =   []
     @State var sheet_id                 :   String
     
     var body: some View {
+
+        PageHeader(title: "\(form_title) form")
         if form_headers.isEmpty {
             VStack{
                 if status_message.isEmpty{
@@ -43,60 +45,65 @@ struct FormView: View {
             }
         } else {
             VStack{
-                Toggle("Entry Type", isOn: $form_entry_toggle)
-                    .animation(.bouncy, value: form_entry_toggle)
-                
-                Spacer()
-                if !form_entry_toggle {
-                    Text("Form entry")
-                    
-                    ScrollView{
-                        ForEach(form_responses.sorted(by: {$0.0 < $1.0}), id:\.key) {
-                            key, val in
-                            //                            Text(key.replacingOccurrences(of: "_", with: " "))
-                            TextField(text: .constant(val)) {
-                                Text(key)
+                HStack{
+                    Spacer()
+                    Toggle("", isOn: $form_entry_toggle)
+                        .frame(width: 150)
+                        .animation(.bouncy, value: form_entry_toggle)
+                    Image(systemName: form_entry_toggle ? "pencil.line" : "quote.closing")
+                }
+                ScrollView{
+                    if !form_entry_toggle {
+                        Text("Form entry")
+                        
+                        ScrollView{
+                            ForEach(form_responses.sorted(by: {$0.0 < $1.0}), id:\.key) {
+                                key, val in
+                                TextField(text: .constant(val)) {
+                                    Text(key)
+                                }
+                                .padding()
+                                .background(.ultraThinMaterial)
+                                .frame(width: 500)
                             }
-                            .padding()
-                            .background(.ultraThinMaterial)
-                            .frame(width: 500)
                         }
-                    }
-                } else {
-                    VStack{
-                        Text("Summary entry")
-                        Text("Summarize the event. Be sure to answer the form questions in your paragraph.")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                        
-                        TextField(form_title, text: $form_entry_paragraph, axis: .vertical)
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(form_headers.count * 2)
-                            .padding()
-                            .background(.ultraThinMaterial)
-                            .ignoresSafeArea(.keyboard)
-                        
-                        VStack{                            //                        loop through the headers to call key in form responses.
-                            ForEach(form_headers, id:\.self){
-                                fheader in
-                                if form_responses[fheader.replacingOccurrences(of: "_", with: " ")] != "" {
-                                    let res_val = form_responses[fheader.replacingOccurrences(of: "_", with: "_")]!
-                                    HStack{
-                                        Image(systemName: res_val != "N/A" ? "check" : "cross")
-                                        Text("\(fheader)")
-                                        Spacer()
-                                        Text("\(res_val)")
+                    } else {
+                        VStack{
+                            Text("Summary entry")
+                            Text("Summarize the event. Be sure to answer the form questions in your paragraph.")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                            
+                            TextField(form_title, text: $form_entry_paragraph, axis: .vertical)
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(form_headers.count * 2)
+                                .padding()
+                                .background(.ultraThinMaterial)
+                                .ignoresSafeArea(.keyboard)
+                            
+                            VStack{
+                                //                        loop through the headers to call key in form responses.
+                                ForEach(form_headers, id:\.self){
+                                    fheader in
+                                    if form_responses[fheader.replacingOccurrences(of: "_", with: " ")] != "" {
+                                        let res_val = form_responses[fheader.replacingOccurrences(of: "_", with: "_")] ?? ""
+                                        HStack{
+                                            Image(systemName: res_val != "N/A" ? "check" : "cross")
+                                            Text("\(fheader)")
+                                            Spacer()
+                                            Text("\(res_val)")
+                                        }
+                                        .foregroundStyle(res_val != "N/A" ? .green : .red)
+                                        .frame(width: 500)
+                                        .onAppear {
+                                            checkFields()
+                                        }
+                                        
                                     }
-                                    .foregroundStyle(res_val != "N/A" ? .green : .red)
-                                    .frame(width: 500)
-                                    .onAppear {
-                                        checkFields()
-                                    }
-                                    
                                 }
                             }
+                            Spacer()
                         }
-                        Spacer()
                     }
                 }
                 Button(action: {
@@ -112,7 +119,7 @@ struct FormView: View {
     
     func checkFields(){
         for response in form_responses {
-            print("+++++Response \(response)")
+//            print("+++++Response \(response)")
         }
     }
     
@@ -207,7 +214,7 @@ struct FormView: View {
                             let sheet_type = properties["sheetType"] as? String
                             if sheet_type == "GRID"{
                                 let grid_properties = properties["gridProperties"] as! [String:Any]
-                                                                print("Show title \(json_returned_data)")
+//                                                                print("Show title \(json_returned_data)")
                                 let new_sheet : GoogleSpreadsheet = GoogleSpreadsheet(id: "\(json_returned_data["spreadsheetId"] ?? "0")" ,
                                                                                         title: "\(properties["title"] ?? "No Title")",
                                                                                         index: properties["index"] as! Int,
@@ -216,7 +223,7 @@ struct FormView: View {
                                                                                         row_count: grid_properties["rowCount"] as! Int)
                                 
                                 if new_sheet.id != "00"{
-                                    print("Ms \(new_sheet)")
+//                                    print("Ms \(new_sheet)")
                                     form_title = new_sheet.title
                                     getFormResponses(sheet: new_sheet)
                                 }
@@ -226,19 +233,19 @@ struct FormView: View {
                             print("Values b no props")
                         }
                     } else {
-                        print("no vals \(json_returned_data)")
+//                        print("no vals")
                         let sheet_error = json_returned_data["error"]
-                            print("sheet \(sheet_error)")
+//                            print("sheet \(sheet_error)")
 //                                status_message = sheet_error
                         if let sheet_status = sheet_error as? [String:Any]{
-                            print("Sheet status \(sheet_status)")
+//                            print("Sheet status \(sheet_status)")
                             status_message = "There's been an error:\n\(sheet_status["status"] as! String)"
                         } else {
                             print("No errors back \(json_returned_data["error"])")
                         }
                     }
                 } else {
-                    print("Later")
+//                    print("Later")
                 }
             } catch(let error){
                 
@@ -255,7 +262,7 @@ struct FormView: View {
     if count > alphabet.count {
         sheet_letter = alphabet[count / 26] + alphabet[count - 26]
     }
-    print(" Returned letter: \(sheet_letter)")
+//    print(" Returned letter: \(sheet_letter)")
     return sheet_letter
 }
     
@@ -267,7 +274,7 @@ struct FormView: View {
             guard let sheet_url = URL(string:"https://sheets.googleapis.com/v4/spreadsheets/\(sheet.id)/values/%27\(encodedTitle)%27!A1:\(getAlphabet(count: sheet.column_count).capitalized)1") else {
                 return
             }
-                    print("Sheet url \(sheet_url)")
+//                    print("Sheet url \(sheet_url)")
             var request = URLRequest(url: sheet_url)
             request.addValue("Bearer \(user_model.current_user.access_token)", forHTTPHeaderField: "Authorization")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -287,7 +294,7 @@ struct FormView: View {
                 do{
                     if let json_output = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]{
                         guard let headers = json_output["values"] as? [[String]] else {
-                            print("Got response data \(json_output)")
+//                            print("Got response data \(json_output)")
                             return
                         }
                         //                    print("Headers \(headers)")
@@ -301,7 +308,7 @@ struct FormView: View {
                                     
                                 }
                             }
-                            print("Responses \(form_responses)")
+//                            print("Responses \(form_responses)")
                         }
                     } else {
                         print("No response data \(response)")
@@ -347,9 +354,6 @@ struct FormView: View {
                     guard let json_dict = try JSONSerialization.jsonObject(with: json_object, options: []) as? [String:String] else {
                         return
                     }
-                    print("Json dict \(json_dict)")
-                    print("my dict \(new_dict)")
-                    print("me lang \(form_responses)")
                     
                 } catch (let e){
                     print("Error doring 296 \(e.localizedDescription)")

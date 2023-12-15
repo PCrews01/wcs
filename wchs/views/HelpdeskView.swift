@@ -215,7 +215,7 @@ struct HelpdeskView: View {
             } else if let data = data {
                 // Handle the response data here
                 if let responseString = try? JSONSerialization.jsonObject(with:  data) as? [String:Any] {
-                    print("Response: \(responseString)")
+//                    print("Response: \(responseString)")
                     if(responseString["UserID"] != nil){
                         getMosyleDevices(tokens: responseString["UserID"] as! String)
                     }

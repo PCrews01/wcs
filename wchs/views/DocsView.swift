@@ -82,7 +82,7 @@ struct DocsView: View {
     }
     
     func getDocByID(id:String){
-        print("IF \(id)")
+//        print("IF \(id)")
         let url = "https://docs.googleapis.com/v1/documents/\(id)"
         var request = URLRequest(url: URL(string: url)!)
         request.addValue("Bearer \(user_model.current_user.access_token)", forHTTPHeaderField: "Authorization")
@@ -117,7 +117,7 @@ struct DocsView: View {
                                             for j in elements{
                                                if let text_run = j["textRun"] as? [String:Any]{
                                                    if let content = text_run["content"] as? String {
-                                                       print("II EL \(content)")
+//                                                       print("II EL \(content)")
                                                        
                                                    }
                                                 }
@@ -135,7 +135,7 @@ struct DocsView: View {
                     let returned_files = json_object.filter({$0.key == "files"})
                     
                     for file in returned_files{
-                        print("Thisis file \(file)")
+//                        print("Thisis file \(file)")
                     }
                 }
             } catch {

@@ -50,7 +50,7 @@ struct AdminView: View {
         NavigationStack{
             VStack{
                 NavigationLink {
-                    FormView(sheet_id: "0")
+                    FormView(form_title: "x", sheet_id: "0")
                 } label: {
                     PageHeader(title: "Admin")
                 }
@@ -60,7 +60,7 @@ struct AdminView: View {
                         ForEach(cards.indices, id:\.self){ card in
                             NavigationLink {
                                 if cards[card].shade == 1 {
-                                    FormView(sheet_id: cards[card].card_title)
+                                    FormView(form_title: cards[card].card_title, sheet_id: cards[card].card_title)
                                 } else {
                                     AdminForms(form_shade: cards[card].shade, form_name: cards[card].card_title)
                                 }
@@ -115,12 +115,12 @@ struct AdminView: View {
                                 }
                             }
                     } else {
-                        print("Doc is \(json_object["values"] ?? ""). Try again with this information.")
+//                        print("Doc is \(json_object["values"] ?? ""). Try again with this information.")
                     }
                     let returned_files = json_object.filter({$0.key == "files"})
                     
                     for file in returned_files{
-                        print("Thisis file \(file)")
+//                        print("Thisis file \(file)")
                     }
                 }
             } catch {
@@ -162,7 +162,7 @@ struct AdminView: View {
                                 }
                             }
                     } else {
-                        print("Spreadheet Doc is \(json_object["values"] ?? "")")
+//                        print("Spreadheet Do3c is \(json_object["values"] ?? "")")
                     }
                 }
             } catch {

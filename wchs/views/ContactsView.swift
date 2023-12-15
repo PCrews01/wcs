@@ -285,7 +285,7 @@ struct ContactsView: View {
                         GIDSignIn.sharedInstance.currentUser?.addScopes(granted_scopes, presenting:presentingm!){
                             yn, error in
                             if let error = error {
-                                print("EXERRR \(error.localizedDescription)")
+                                print("Error \(error.localizedDescription)")
                             }
                         }
                     }
@@ -386,7 +386,7 @@ struct ContactsView: View {
                         GIDSignIn.sharedInstance.currentUser?.addScopes(granted_scopes, presenting:presentingm!){
                             yn, error in
                             if let error = error {
-                                print("EXERRR \(error.localizedDescription)")
+                                print("Error \(error.localizedDescription)")
                             }
                         }
                     }

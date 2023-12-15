@@ -158,6 +158,7 @@ struct GWForm{
         self.sheet_id = sheet_id
     }
 }
+extension GWForm : Identifiable {}
 
 struct NewsArticle{
     var id                  =   UUID().uuidString
